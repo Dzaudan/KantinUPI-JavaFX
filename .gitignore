@@ -1,0 +1,6 @@
+
+target/
+.nbattrs
+.nb-gradle/
+*.log
+.DS_Store

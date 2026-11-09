@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="kelas.controller.daftarController"
+            stylesheets="@styles/app.css">
+    <top>
+        <VBox spacing="12" styleClass="header">
+            <Label text="Kantin UPI Purwakarta - Daftar Menu" styleClass="title"/>
+            <HBox spacing="10">
+                <TextField fx:id="cariField" promptText="Cari nama menu/produk..." onAction="#cari" HBox.hgrow="ALWAYS"/>
+                <Button text="Cari" onAction="#cari" styleClass="button-primary"/>
+                <Button text="+ Tambah Produk" onAction="#tambah"/>
+                <Button text="Lihat Detail" onAction="#detail"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tabel">
+            <columns>
+                <TableColumn fx:id="kodeCol" text="Kode" prefWidth="120"/>
+                <TableColumn fx:id="namaCol" text="Nama Produk" prefWidth="250"/>
+                <TableColumn fx:id="kategoriCol" text="Kategori" prefWidth="150"/>
+                <TableColumn fx:id="hargaCol" text="Harga (Rp)" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox styleClass="page">
+            <Label fx:id="pesanLabel" wrapText="true" styleClass="error"/>
+        </VBox>
+    </bottom>
+</BorderPane>
